@@ -1,0 +1,145 @@
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: #f7f7f7;
+  box-sizing: border-box;
+  color: #333;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 0;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato', sans-serif;
+  line-height: 1;
+}
+
+h1.title {
+  line-height: 1.25;
+}
+
+p {
+  line-height: 1.5;
+}
+
+button {
+  border: 1px solid #ddd;
+  cursor: pointer;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1rem;
+  padding: 6px 12px;
+}
+
+svg {
+  min-height: 20px;
+  min-width: 20px;
+}
+
+input {
+  border: 1px solid #bbb;
+  box-sizing: border-box;
+  font-size: 1rem;
+  padding: 6px 8px;
+  width: 100%;
+}
+
+.center-content {
+  text-align: center;
+}
+
+.page-title {
+  color: $primary;
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 0.875rem;
+}
+
+.back-button {
+  align-items: center;
+  color: $primary;
+  display: flex;
+}
+
+.card {
+  background-color: #fff;
+  margin-bottom: 1rem;
+
+  .card-header {
+    font-size: 1.75rem;
+    margin-top: 0;
+    padding: 10px;
+
+    .header-buttons {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      width: 100%;
+    }
+
+    &.no-pad {
+      padding: 0;
+    }
+  }
+
+  .card-content {
+    padding: 10px;
+
+    &.no-pad {
+      padding: 0;
+    }
+  }
+
+  .homepage_recent-rounds_disclaimer {
+    margin-bottom: 0;
+  }
+
+  & > *:not(div):first-child {
+    margin-top: 0;
+  }
+
+  & > *:not(div):last-child {
+    margin-bottom: 0;
+  }
+}
+
+#app-container {
+  overflow-x: hidden;
+}
+
+#main-panel {
+  @include nav-spacer;
+  // 60px for tray height and 20 for top and bottom padding and some extra love
+  min-height: calc(100vh - 85px);
+  padding: 30px;
+  position: relative;
+
+  @media screen and (max-width: 900px) {
+    padding: 10px;
+  }
+
+  .homepage-title {
+    margin-top: 0;
+  }
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}

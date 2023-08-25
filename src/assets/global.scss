@@ -1,0 +1,49 @@
+$green: #009a17;
+$red: #d32f2f;
+$blue: #64b5f6;
+$grey: #e0e0e0;
+
+$primary: #004d8c;
+$secondary: #ffd700;
+
+$white: #fff;
+$black: #333;
+
+@mixin sm-shadow {
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
+}
+
+@mixin rounded-corners {
+  border-radius: 10px;
+}
+
+@mixin nav-spacer {
+  margin-bottom: 65px;
+}
+
+@mixin green-btn {
+  @include sm-shadow;
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+  color: #fff;
+}
+
+@mixin red-btn {
+  background-color: #e74c3c;
+  border-color: #e74c3c;
+  color: #fff;
+}
+
+@mixin blue-btn {
+  background-color: $blue;
+  border-color: $blue;
+  color: #333;
+  width: 100%;
+}
+
+@mixin grey-btn {
+  background-color: #cccccc;
+  border-color: #cccccc;
+  color: #333;
+  width: 100%;
+}
