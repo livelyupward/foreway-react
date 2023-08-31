@@ -1,0 +1,32 @@
+version: 2.1
+
+jobs:
+  run-vitest:
+    docker:
+      - image: node
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm run test
+  pull-and-build:
+    docker:
+      - image: arvindr226/alpine-ssh
+    steps:
+      - checkout
+      - run: ssh -oStrictHostKeyChecking=no -v $USER@$IP "./deploy-app.sh"
+
+workflows:
+  golf-app-workflow:
+    jobs:
+      - run-vitest:
+          filters:
+            branches:
+              only:
+                - main
+      - pull-and-build:
+          requires:
+            - run-vitest
+          filters:
+            branches:
+              only:
+                - main

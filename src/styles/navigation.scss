@@ -30,7 +30,7 @@
 
     .nav-tray_link-list_link {
       align-items: center;
-      color: #333;
+      color: $primary;
       display: flex;
       flex-direction: column;
       height: 60px;
@@ -39,18 +39,17 @@
       text-decoration: none;
       width: 100%;
 
-      &.router-link-active {
-        background-color: $primary;
+      &.active {
         color: #fff;
+        background-color: $primary;
 
         .unicon {
           fill: #fff;
         }
       }
 
-      .unicon {
-        fill: $primary;
-        margin-right: 4px;
+      .nav-tray_link-list_link-icon {
+        margin-bottom: 5px;
       }
     }
   }

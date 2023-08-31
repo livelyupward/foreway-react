@@ -1,4 +1,7 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import '../../styles/navigation.scss';
 
 function NavigationTray() {
   const checkRoundLink = () => {
@@ -13,28 +16,32 @@ function NavigationTray() {
     <aside id='navigation-tray'>
       <ul className='nav-tray_link-list'>
         <li className='nav-tray_link-list_link-container'>
-          <Link to='/'>
-            {/* <FontAwesomeIcon icon={icon({ name: 'house-chimney' })} /> */}
+          {/* @ts-ignore */}
+          <NavLink className='nav-tray_link-list_link' to='/'>
+            <FontAwesomeIcon className='nav-tray_link-list_link-icon' icon='fa-solid fa-house-flag' />
             Home
-          </Link>
+          </NavLink>
         </li>
         <li className='nav-tray_link-list_link-container'>
-          <Link to={checkRoundLink()}>
-            {/* <FontAwesomeIcon icon={icon({ name: 'golf-ball-tee' })} /> */}
+          {/* @ts-ignore */}
+          <NavLink className='nav-tray_link-list_link' to={checkRoundLink()}>
+            <FontAwesomeIcon className='nav-tray_link-list_link-icon' icon='fa-regular fa-golf-ball-tee' />
             Round
-          </Link>
+          </NavLink>
         </li>
         <li className='nav-tray_link-list_link-container'>
-          <Link to='/stats/my'>
-            {/* <FontAwesomeIcon icon={icon({ name: 'list-ol' })} /> */}
+          {/* @ts-ignore */}
+          <NavLink className='nav-tray_link-list_link' to='/stats/my'>
+            <FontAwesomeIcon className='nav-tray_link-list_link-icon' icon='fa-duotone fa-arrow-up-1-9' />
             Stats
-          </Link>
+          </NavLink>
         </li>
         <li className='nav-tray_link-list_link-container'>
-          <Link to='/settings'>
-            {/* <FontAwesomeIcon icon={icon({ name: 'user-gear' })} /> */}
+          {/* @ts-ignore */}
+          <NavLink className='nav-tray_link-list_link' to='/settings'>
+            <FontAwesomeIcon className='nav-tray_link-list_link-icon' icon='fa-duotone fa-gears' />
             Account
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </aside>

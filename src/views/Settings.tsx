@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 import FriendsCard from '../components/friends/FriendsCard';
 import PreferencesCard from '../components/preferences/PreferencesCard';
 
@@ -25,7 +25,9 @@ function Settings() {
             Preferences
           </button>
         </div>
-        <div className='card-tabs_tab-content'>{activeTabContent}</div>
+        <div className='card-tabs_tab-content'>
+          <Suspense fallback={<div>Loading...</div>}>{activeTabContent}</Suspense>
+        </div>
       </div>
     </section>
   );
