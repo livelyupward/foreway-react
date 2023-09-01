@@ -29,7 +29,7 @@ function App() {
   useEffect((): any => {
     let mounted = true;
     if (localStorage.getItem('gg_token')) {
-      getUser(JSON.parse(localStorage.getItem('gg_token')))
+      getUser(JSON.parse(localStorage.getItem('gg_token') || ''))
         .then((user: any) => {
           setUser(user);
         })
